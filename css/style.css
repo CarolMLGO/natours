@@ -696,14 +696,23 @@ header {
     opacity: 0; }
 
 .header {
-  height: 95vh;
+  height: 85vh;
   /*95% viewheight*/
-  background-image: linear-gradient(to right bottom, rgba(17, 153, 14, 0.6), rgba(56, 239, 125, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(17, 153, 14, 0.6), rgba(56, 239, 125, 0.8)), url("../img/hero-small.jpg");
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
+  @supports (clip-path: polygon(0, 0)) or (-webkit-clip-path: polygon(0, 0)) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      height: 95vh;
+      /*95% viewheight*/ } }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(17, 153, 14, 0.6), rgba(56, 239, 125, 0.8)), url("../img/hero.jpg"); } }
   @media (max-width: 56.25em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
@@ -972,6 +981,11 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.3); } }
   .popup__content {
     position: absolute;
     top: 50%;
@@ -1069,10 +1083,13 @@ header {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(17, 153, 14, 0.6), rgba(56, 239, 125, 0.8)), url("../img/nat-4.jpg");
+  background-image: linear-gradient(to right bottom, rgba(17, 153, 14, 0.6), rgba(56, 239, 125, 0.8)), url("../img/nat-4-medium.jpg");
   background-size: cover;
   margin-top: -10rem;
   transform: skewY(-7deg); }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .section-features {
+      background-image: linear-gradient(to right bottom, rgba(17, 153, 14, 0.6), rgba(56, 239, 125, 0.8)), url("../img/nat-4.jpg"); } }
   .section-features > * {
     transform: skewY(7deg); }
   @media (max-width: 56.25em) {
