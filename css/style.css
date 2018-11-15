@@ -539,7 +539,7 @@ header {
         font-size: 4rem; } }
 
 @media (max-width: 56.25em) {
-  .col-1-of-3:last-child {
+  .section-tours .col-1-of-3:last-child {
     margin-bottom: 0 !important; } }
 
 .story {
