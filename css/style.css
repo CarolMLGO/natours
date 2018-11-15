@@ -538,6 +538,10 @@ header {
         margin-bottom: 2rem;
         font-size: 4rem; } }
 
+@media (max-width: 56.25em) {
+  .col-1-of-3:last-child {
+    margin-bottom: 0 !important; } }
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -771,7 +775,8 @@ header {
     @media (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important;
-        margin-right: 0; } }
+        margin-right: 0;
+        margin-bottom: 6rem; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem)/2); }
   .row .col-1-of-3 {
